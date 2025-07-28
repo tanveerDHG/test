@@ -1,0 +1,288 @@
+/* WordPress Payment Forms Admin CSS */
+
+.wpf-admin-stats {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.wpf-stat-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    flex: 1;
+    border-left: 4px solid #0073aa;
+}
+
+.wpf-stat-box h3 {
+    font-size: 32px;
+    margin: 0 0 10px 0;
+    color: #0073aa;
+    font-weight: 700;
+}
+
+.wpf-stat-box p {
+    margin: 0;
+    color: #666;
+    font-weight: 600;
+}
+
+.wpf-status {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.wpf-status-pending {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeaa7;
+}
+
+.wpf-status-completed {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.wpf-status-failed {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.wpf-shortcodes {
+    margin-top: 40px;
+    display: flex;
+    gap: 20px;
+}
+
+.wpf-shortcode-box {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #28a745;
+    flex: 1;
+}
+
+.wpf-shortcode-box h4 {
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.wpf-shortcode-box code {
+    background: #fff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    display: inline-block;
+    font-weight: 600;
+    color: #0073aa;
+    margin-bottom: 10px;
+}
+
+.wpf-shortcode-box p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.wpf-setup-guide {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    margin-top: 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.wpf-setup-guide h2 {
+    color: #0073aa;
+    border-bottom: 2px solid #0073aa;
+    padding-bottom: 10px;
+}
+
+.wpf-setup-guide ol {
+    line-height: 1.8;
+}
+
+.wpf-setup-guide li {
+    margin-bottom: 10px;
+}
+
+.wpf-setup-guide strong {
+    color: #333;
+}
+
+.wpf-setup-guide code {
+    background: #f1f1f1;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 13px;
+}
+
+.wpf-setup-guide h3 {
+    color: #dc3545;
+    margin-top: 30px;
+}
+
+.wpf-setup-guide ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.wpf-setup-guide ul li {
+    margin-bottom: 5px;
+}
+
+/* Responsive admin */
+@media (max-width: 782px) {
+    .wpf-admin-stats {
+        flex-direction: column;
+    }
+    
+    .wpf-shortcodes {
+        flex-direction: column;
+    }
+    
+    .wp-list-table.widefat {
+        font-size: 14px;
+    }
+    
+    .wp-list-table.widefat th,
+    .wp-list-table.widefat td {
+        padding: 8px 4px;
+    }
+}
+
+/* Modal styles for details */
+.wpf-modal {
+    display: none;
+    position: fixed;
+    z-index: 999999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.wpf-modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.wpf-modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #666;
+}
+
+.wpf-modal-close:hover {
+    color: #000;
+}
+
+.wpf-detail-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.wpf-detail-table th,
+.wpf-detail-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.wpf-detail-table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    width: 30%;
+}
+
+/* Button improvements */
+.button.button-small {
+    font-size: 11px;
+    height: auto;
+    line-height: 1.4;
+    padding: 4px 8px;
+    margin-right: 5px;
+}
+
+/* Success/Error notices */
+.wpf-admin .notice {
+    margin: 20px 0;
+}
+
+/* Loading state */
+.wpf-loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* Copy button for payment links */
+.wpf-copy-btn {
+    background: #0073aa;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.wpf-copy-btn:hover {
+    background: #005a87;
+}
+
+.wpf-copy-btn:active {
+    background: #004666;
+}
+
+/* Highlight important information */
+.wpf-highlight {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 4px;
+    padding: 12px;
+    margin: 15px 0;
+}
+
+.wpf-highlight.info {
+    background: #d1ecf1;
+    border-color: #bee5eb;
+    color: #0c5460;
+}
+
+.wpf-highlight.success {
+    background: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
+
+.wpf-highlight.warning {
+    background: #fff3cd;
+    border-color: #ffeaa7;
+    color: #856404;
+}
+
+.wpf-highlight.error {
+    background: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+}
